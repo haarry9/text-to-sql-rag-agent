@@ -10,14 +10,39 @@ Database path
 Model names
 """
 
-DATABASE_PATH = Path.Path(os.getenv("DATABASE_PATH", "database/olist_ecommerce.sqlite"))
+DB_PATH = Path.Path(os.getenv("DATABASE_PATH", "database/olist_ecommerce.sqlite"))
+DB_URL = f"sqlite:///{DB_PATH}"
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-MODEL_NAME = os.getenv("MODEL_NAME", "gpt-4")
-EMBEDDING_MODEL_NAME = os.getenv("EMBEDDING_MODEL_NAME", "text-embedding-3-large")
-CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "1000"))
-CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "200"))
-MAX_TOKENS = int(os.getenv("MAX_TOKENS", "4096"))
-TEMPERATURE = float(os.getenv("TEMPERATURE", "0.0"))
-print(f"Database Path: {DATABASE_PATH}")    
+
+# MODEL CONFIGURATION
+# LLM for SQL generation (needs to be good at SQL)
+SQL_GENERATION_MODEL = "openai/gpt-oss-120b"
+
+# LLM for description generation (can be cheaper)
+DESCRIPTION_MODEL = "openai/gpt-oss-120b"
+
+# LLM for answer formatting (can be cheaper)
+ANSWER_MODEL = "openai/gpt-oss-120b"
+
+# Embedding model for vector search
+EMBEDDING_MODEL = "text-embedding-3-small"
+
+# AGENT SETTINGS
+# Maximum number of tables to include in context
+MAX_TABLES_IN_CONTEXT = 3
+
+# SQL execution timeout (seconds)
+SQL_TIMEOUT_SECONDS = 30
+
+# Maximum rows to return from query
+MAX_RESULT_ROWS = 1000
+
+# Temperature for LLM calls
+TEMPERATURE = 0
+
+
+# INDEXING SETTINGS
+# Number of sample rows to include in schema descriptions
+SAMPLE_ROWS_FOR_DESCRIPTION = 3

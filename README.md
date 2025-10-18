@@ -37,3 +37,4 @@ sql_agent_hybrid/
 
 ---
 
+uv run python -m database.connection
