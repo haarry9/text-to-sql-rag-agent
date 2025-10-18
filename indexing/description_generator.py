@@ -75,34 +75,34 @@ class DescriptionGenerator:
 
 
 # Test the generator
-if __name__ == "__main__":
-    from database.connection import get_db
-    from indexing.schema_extractor import SchemaExtractor
+# if __name__ == "__main__":
+#     from database.connection import get_db
+#     from indexing.schema_extractor import SchemaExtractor
     
-    print("=" * 60)
-    print("TESTING DESCRIPTION GENERATOR")
-    print("=" * 60)
+#     print("=" * 60)
+#     print("TESTING DESCRIPTION GENERATOR")
+#     print("=" * 60)
     
-    # Get database and extract schema
-    db = get_db()
-    extractor = SchemaExtractor(db)
+#     # Get database and extract schema
+#     db = get_db()
+#     extractor = SchemaExtractor(db)
     
-    # Get schema for first table
-    tables = extractor._get_table_list()
-    if tables:
-        print(f"\nGenerating description for: {tables[0]}")
-        table_info = extractor.extract_table(tables[0])
+#     # Get schema for first table
+#     tables = extractor._get_table_list()
+#     if tables:
+#         print(f"\nGenerating description for: {tables[0]}")
+#         table_info = extractor.extract_table(tables[0])
         
-        # Generate description
-        generator = DescriptionGenerator()
-        description = generator.generate(table_info)
+#         # Generate description
+#         generator = DescriptionGenerator()
+#         description = generator.generate(table_info)
         
-        print("\n" + "=" * 60)
-        print(f"DESCRIPTION FOR {tables[0].upper()}")
-        print("=" * 60)
-        print(description)
-        print("=" * 60)
+#         print("\n" + "=" * 60)
+#         print(f"DESCRIPTION FOR {tables[0].upper()}")
+#         print("=" * 60)
+#         print(description)
+#         print("=" * 60)
         
-        print("\n✓ Description generated successfully!")
-    else:
-        print("No tables found in database")
+#         print("\n✓ Description generated successfully!")
+#     else:
+#         print("No tables found in database")

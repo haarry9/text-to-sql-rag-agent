@@ -87,32 +87,32 @@ class SchemaExtractor:
         return tables
     
 # Test the extractor
-if __name__ == "__main__":
-    from database.connection import get_db
+# if __name__ == "__main__":
+#     from database.connection import get_db
     
-    print("=" * 60)
-    print("TESTING SCHEMA EXTRACTOR")
-    print("=" * 60)
+#     print("=" * 60)
+#     print("TESTING SCHEMA EXTRACTOR")
+#     print("=" * 60)
     
-    # Get database connection
-    db = get_db()
+#     # Get database connection
+#     db = get_db()
     
-    # Create extractor
-    extractor = SchemaExtractor(db)
+#     # Create extractor
+#     extractor = SchemaExtractor(db)
     
-    # Test getting table list
-    print("\nTest 1: Get table list")
-    tables = extractor._get_table_list()
-    print(f"Tables: {tables}")
+#     # Test getting table list
+#     print("\nTest 1: Get table list")
+#     tables = extractor._get_table_list()
+#     print(f"Tables: {tables}")
     
-    # Test extracting single table
-    print("\nTest 2: Extract single table")
-    if tables:
-        table_info = extractor.extract_table(tables[0])
-        print(f"\nSchema for {tables[0]}:")
-        print(table_info['schema'][:500] + "...")
+#     # Test extracting single table
+#     print("\nTest 2: Extract single table")
+#     if tables:
+#         table_info = extractor.extract_table(tables[0])
+#         print(f"\nSchema for {tables[0]}:")
+#         print(table_info['schema'][:500] + "...")
     
-    # Test extracting all tables
-    print("\nTest 3: Extract all tables")
-    all_tables = extractor.extract_all_tables()
-    print(f"\n✓ Successfully extracted {len(all_tables)} tables")
+#     # Test extracting all tables
+#     print("\nTest 3: Extract all tables")
+#     all_tables = extractor.extract_all_tables()
+#     print(f"\n✓ Successfully extracted {len(all_tables)} tables")
