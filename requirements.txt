@@ -5,6 +5,7 @@ python-dotenv
 langchain
 langchain-community
 langchain-openai
+langchain-groq
 
 # Database
 sqlalchemy
@@ -19,6 +20,7 @@ streamlit
 pytest
 
 pydantic
+uvicorn
 
 requests
 kagglehub

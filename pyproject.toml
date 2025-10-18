@@ -9,6 +9,7 @@ dependencies = [
     "kagglehub>=0.3.13",
     "langchain>=1.0.0",
     "langchain-community>=0.4",
+    "langchain-groq>=1.0.0",
     "langchain-openai>=1.0.0",
     "pathlib>=1.0.1",
     "pydantic>=2.12.3",
@@ -17,4 +18,5 @@ dependencies = [
     "requests>=2.32.5",
     "sqlalchemy>=2.0.44",
     "streamlit>=1.50.0",
+    "uvicorn>=0.38.0",
 ]
