@@ -33,8 +33,7 @@ sql_agent_hybrid/
 
 ---
 
-![Entity Relationship diagram showing database tables and their relationships in the Olist e-commerce database. Tables include customers, orders, order items, products, sellers, and payments, connected by primary and foreign key relationships]
-(db_schema.png)
+![Entity Relationship diagram showing database tables and their relationships in the Olist e-commerce database. Tables include customers, orders, order items, products, sellers, and payments, connected by primary and foreign key relationships](db_schema.png)
 
 ---
 
