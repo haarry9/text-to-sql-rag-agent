@@ -1,0 +1,27 @@
+# Core Dependencies
+python-dotenv
+
+# LangChain Ecosystem
+langchain
+langchain-community
+langchain-openai
+
+# Database
+sqlalchemy
+
+# Vector Store
+faiss-cpu
+
+# Web Interface
+streamlit
+
+# Optional: Testing
+pytest
+
+pydantic
+
+requests
+kagglehub
+pathlib
+sqlalchemy
+
